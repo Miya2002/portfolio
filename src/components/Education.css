@@ -1,0 +1,733 @@
+/* =========================================
+   EDUCATION — LUXURY EDITORIAL DESIGN
+========================================= */
+
+.education-section {
+    position: relative;
+    padding: 95px 5% 80px;
+    color: #111111;
+    background: #f6f6f3;
+    overflow: hidden;
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.education-bg-text {
+    position: absolute;
+    top: 35px;
+    left: 5%;
+    z-index: 0;
+    color: rgba(20, 20, 20, 0.045);
+    font-size: clamp(90px, 12vw, 175px);
+    font-weight: 800;
+    letter-spacing: -8px;
+    line-height: 0.9;
+    pointer-events: none;
+    user-select: none;
+}
+
+.education-glow {
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient( circle, rgba(170, 140, 80, 0.07), transparent 68%);
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.education-header {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 50px;
+    align-items: end;
+    margin-bottom: 45px;
+}
+
+.education-title-wrap {
+    position: relative;
+}
+
+.education-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #8a7857;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.education-header h2 {
+    margin: 0;
+    font-size: clamp(52px, 5.5vw, 78px);
+    font-weight: 400;
+    letter-spacing: -4px;
+    line-height: 0.95;
+}
+
+.education-header h2 span {
+    color: #8b8b86;
+    font-weight: 200;
+}
+
+.education-introduction {
+    max-width: 360px;
+    margin: 0;
+    color: #6b6b68;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   DEGREE CARD
+========================================= */
+
+.degree-card {
+    position: relative;
+    z-index: 2;
+    min-height: 365px;
+    padding: 30px 34px;
+    color: #ffffff;
+    background: #161616;
+    border: 1px solid #292929;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.degree-card:hover {
+    transform: translateY(-4px);
+    border-color: #444444;
+}
+
+
+/* subtle luxury glow */
+
+.degree-card::before {
+    position: absolute;
+    top: -180px;
+    right: -120px;
+    width: 420px;
+    height: 420px;
+    content: "";
+    background: radial-gradient( circle, rgba(255, 255, 255, 0.08), transparent 65%);
+    pointer-events: none;
+}
+
+
+/* gold line */
+
+.degree-card::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    content: "";
+    background: #a89163;
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   DEGREE TOP
+========================================= */
+
+.degree-card-top {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.degree-number {
+    color: #747474;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.degree-status {
+    padding: 6px 10px;
+    color: #a89163;
+    border: 1px solid rgba(168, 145, 99, 0.35);
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   DEGREE CONTENT
+========================================= */
+
+.degree-content {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: minmax(300px, 1.5fr) minmax(230px, 0.9fr) 130px;
+    gap: 45px;
+    align-items: center;
+}
+
+.degree-type {
+    display: block;
+    margin-bottom: 14px;
+    color: #8c8c8c;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.degree-main h3 {
+    margin: 0 0 25px;
+    font-size: clamp(38px, 4vw, 60px);
+    font-weight: 400;
+    letter-spacing: -3px;
+    line-height: 0.98;
+}
+
+.university {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.university strong {
+    color: #dddddd;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.university span {
+    color: #707070;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+}
+
+
+/* =========================================
+   DEGREE DETAILS
+========================================= */
+
+.degree-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.degree-detail {
+    padding: 14px 0;
+    border-bottom: 1px solid #353535;
+}
+
+.degree-detail:first-child {
+    padding-top: 0;
+}
+
+.degree-detail:last-child {
+    border-bottom: none;
+}
+
+.degree-detail span {
+    display: block;
+    margin-bottom: 7px;
+    color: #6f6f6f;
+    font-size: 8px;
+    letter-spacing: 1.7px;
+}
+
+.degree-detail strong {
+    color: #d2d2d2;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+/* =========================================
+   CGPA
+========================================= */
+
+.cgpa-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cgpa-circle {
+    width: 118px;
+    height: 118px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4b4b4b;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    transition: background 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+.degree-card:hover .cgpa-circle {
+    color: #111111;
+    background: #f1f0ed;
+    transform: rotate(5deg);
+}
+
+.cgpa-circle strong {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.cgpa-circle span {
+    margin-top: 3px;
+    color: #777777;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   WATERMARK
+========================================= */
+
+.degree-watermark {
+    position: absolute;
+    right: 15px;
+    bottom: -55px;
+    color: rgba(255, 255, 255, 0.025);
+    font-size: 220px;
+    font-weight: 800;
+    letter-spacing: -20px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CERTIFICATIONS HEADING
+========================================= */
+
+.certifications-heading {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 65px 0 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #d8d8d3;
+}
+
+.certifications-heading>div:first-child span {
+    display: block;
+    margin-bottom: 7px;
+    color: #8a7857;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.certifications-heading h3 {
+    margin: 0;
+    font-size: clamp(25px, 2.5vw, 36px);
+    font-weight: 400;
+    letter-spacing: -1.5px;
+}
+
+.records-count {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.records-count strong {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.records-count span {
+    color: #858581;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   CERTIFICATION GRID
+========================================= */
+
+.certifications-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #d8d8d3;
+    border-left: 1px solid #d8d8d3;
+}
+
+
+/* =========================================
+   CERTIFICATION CARD
+========================================= */
+
+.certificate-card {
+    position: relative;
+    min-height: 265px;
+    padding: 23px;
+    background: #f6f6f3;
+    border-right: 1px solid #d8d8d3;
+    border-bottom: 1px solid #d8d8d3;
+    overflow: hidden;
+    transition: color 0.35s ease, background 0.35s ease, transform 0.35s ease;
+}
+
+.certificate-card:hover {
+    z-index: 3;
+    color: #ffffff;
+    background: #171717;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   CERTIFICATE TOP
+========================================= */
+
+.certificate-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.certificate-number {
+    color: #858581;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+}
+
+.certificate-arrow {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: #161616;
+    border-radius: 50%;
+    font-size: 14px;
+    transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
+}
+
+.certificate-card:hover .certificate-arrow {
+    color: #111111;
+    background: #ffffff;
+    transform: rotate(45deg);
+}
+
+
+/* =========================================
+   CERTIFICATE BODY
+========================================= */
+
+.certificate-body {
+    margin-top: 35px;
+}
+
+.certificate-type {
+    display: block;
+    margin-bottom: 8px;
+    color: #858581;
+    font-size: 8px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.certificate-card h4 {
+    margin: 0 0 12px;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.certificate-body p {
+    max-width: 380px;
+    margin: 0;
+    color: #777773;
+    font-size: 10px;
+    line-height: 1.65;
+    transition: color 0.35s ease;
+}
+
+.certificate-card:hover .certificate-body p {
+    color: #a8a8a8;
+}
+
+
+/* =========================================
+   CERTIFICATE FOOTER
+========================================= */
+
+.certificate-footer {
+    position: absolute;
+    left: 23px;
+    right: 23px;
+    bottom: 20px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: #6f6f6b;
+    border-top: 1px solid #d5d5d0;
+    font-size: 9px;
+    transition: color 0.35s ease, border-color 0.35s ease;
+}
+
+.certificate-card:hover .certificate-footer {
+    color: #a5a5a5;
+    border-color: #3b3b3b;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+    .education-section {
+        padding: 85px 4% 70px;
+    }
+    .education-header {
+        grid-template-columns: 1fr 300px;
+        gap: 35px;
+    }
+    .degree-content {
+        grid-template-columns: 1.3fr 1fr 110px;
+        gap: 30px;
+    }
+    .degree-main h3 {
+        font-size: 46px;
+    }
+    .cgpa-circle {
+        width: 100px;
+        height: 100px;
+    }
+    .cgpa-circle strong {
+        font-size: 26px;
+    }
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 760px) {
+    .education-header {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .education-introduction {
+        max-width: 500px;
+    }
+    .degree-card {
+        padding: 25px;
+    }
+    .degree-content {
+        grid-template-columns: 1fr 110px;
+        gap: 25px;
+    }
+    .degree-details {
+        grid-column: 1 / 2;
+    }
+    .cgpa-wrapper {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .degree-main h3 {
+        font-size: 42px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .education-section {
+        padding: 70px 18px 55px;
+    }
+    /* Background */
+    .education-bg-text {
+        top: 28px;
+        left: 18px;
+        font-size: 22vw;
+        letter-spacing: -4px;
+    }
+    /* Header */
+    .education-header {
+        margin-bottom: 32px;
+    }
+    .education-label {
+        margin-bottom: 7px;
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+    .education-header h2 {
+        font-size: 43px;
+        letter-spacing: -3px;
+    }
+    .education-introduction {
+        max-width: 100%;
+        font-size: 11px;
+        line-height: 1.7;
+    }
+    /* Degree */
+    .degree-card {
+        min-height: auto;
+        padding: 22px 20px 25px;
+    }
+    .degree-card-top {
+        margin-bottom: 28px;
+    }
+    .degree-status {
+        padding: 5px 8px;
+        font-size: 7px;
+    }
+    .degree-content {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+        align-items: stretch;
+    }
+    .degree-main h3 {
+        margin-bottom: 18px;
+        font-size: 38px;
+        letter-spacing: -2.5px;
+    }
+    .degree-type {
+        margin-bottom: 10px;
+        font-size: 8px;
+    }
+    .university strong {
+        font-size: 12px;
+    }
+    .university span {
+        font-size: 9px;
+    }
+    /* Details */
+    .degree-details {
+        width: 100%;
+    }
+    .degree-detail {
+        padding: 12px 0;
+    }
+    .degree-detail span {
+        font-size: 7px;
+    }
+    .degree-detail strong {
+        font-size: 11px;
+    }
+    /* CGPA */
+    .cgpa-wrapper {
+        justify-content: flex-start;
+    }
+    .cgpa-circle {
+        width: 88px;
+        height: 88px;
+    }
+    .cgpa-circle strong {
+        font-size: 23px;
+    }
+    .cgpa-circle span {
+        font-size: 7px;
+    }
+    .degree-watermark {
+        right: -5px;
+        bottom: -30px;
+        font-size: 130px;
+    }
+    /* Certifications */
+    .certifications-heading {
+        margin: 48px 0 20px;
+        padding-bottom: 14px;
+    }
+    .certifications-heading h3 {
+        max-width: 260px;
+        font-size: 24px;
+        letter-spacing: -1px;
+        line-height: 1.05;
+    }
+    .records-count {
+        display: none;
+    }
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    /* Cards */
+    .certificate-card {
+        min-height: 230px;
+        padding: 20px;
+    }
+    .certificate-body {
+        margin-top: 27px;
+    }
+    .certificate-card h4 {
+        font-size: 21px;
+    }
+    .certificate-body p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+    .certificate-footer {
+        left: 20px;
+        right: 20px;
+        bottom: 17px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+    .education-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .education-header h2 {
+        font-size: 39px;
+    }
+    .degree-main h3 {
+        font-size: 34px;
+    }
+    .certificate-card {
+        min-height: 225px;
+    }
+}
+
+
+/* =========================================
+   REDUCE MOTION FOR USERS WHO REQUEST IT
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .degree-card,
+    .cgpa-circle,
+    .certificate-card,
+    .certificate-arrow {
+        transition: none;
+    }
+}
