@@ -118,7 +118,7 @@ function Projects() {
       ========================= */}
 
       <div className="projects-grid">
-        {projects.map((project, index) => (
+        {projects.slice(0,3).map((project,index)=>(
           <motion.article
             className="project-card"
             key={project.number}
@@ -210,6 +210,16 @@ function Projects() {
           </motion.article>
         ))}
       </div>
+      <div className="view-more-wrapper">
+
+<a 
+href="/projects"
+className="view-more-button"
+>
+View More Projects ↗
+</a>
+
+</div>
     </section>
   );
 }

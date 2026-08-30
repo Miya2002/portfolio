@@ -23,58 +23,85 @@ function Contact() {
     }
   };
 
-  // Contact form submit
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+ const handleSubmit = async (event) => {
+  event.preventDefault();
 
-    setSending(true);
-    setStatus("");
+  setSending(true);
+  setStatus("");
 
-    const form = event.currentTarget;
-    const formData = new FormData(form);
+  const form = event.currentTarget;
 
-    const name = formData.get("name");
-    const senderEmail = formData.get("email");
-    const subject = formData.get("subject");
-    const message = formData.get("message");
+  const formData = new FormData(form);
 
-    try {
-      const response = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email: senderEmail,
-          subject,
-          message,
-        }),
-      });
+  const name = formData.get("name");
+  const senderEmail = formData.get("email");
+  const subject = formData.get("subject");
+  const message = formData.get("message");
 
-      const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(data.message || "Unable to send message.");
-      }
+  try {
 
-      // Success message
-      setStatus(
-        "Message sent successfully! I'll get back to you within 24 hours."
+    const response = await fetch("/api/contact", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({
+  name,
+  email: senderEmail,
+  subject: subject,
+  message: message,
+}),
+
+    });
+
+const text = await response.text();
+
+let data;
+
+try {
+  data = JSON.parse(text);
+} catch {
+  throw new Error(
+    "Server returned invalid response: " + text
+  );
+}
+
+console.log("SERVER RESPONSE:", data);
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        data.message || "Unable to send message."
       );
 
-      // Clear form
-      form.reset();
-    } catch (error) {
-      console.error("Contact form error:", error);
-
-      setStatus(
-        "Unable to send your message. Please try again or email me directly."
-      );
-    } finally {
-      setSending(false);
     }
-  };
+
+
+    setStatus(
+      "Message sent successfully! I'll get back to you within 24 hours."
+    );
+
+
+    form.reset();
+
+
+  } catch (error) {
+
+console.error("Contact form error:", error);
+
+setStatus(error.message);
+
+}finally {
+
+    setSending(false);
+
+  }
+
+};
 
   return (
     <section id="contact" className="contact-section">

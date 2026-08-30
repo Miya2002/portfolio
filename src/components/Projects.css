@@ -635,3 +635,27 @@
         transition: none !important;
     }
 }
+
+.view-more-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+}
+
+.view-more-button {
+    padding: 16px 35px;
+    border-radius: 999px;
+    background: #111;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+
+.view-more-button:hover {
+    transform: translateY(-4px);
+    background: #000;
+}

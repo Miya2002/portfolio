@@ -6,98 +6,137 @@ import { Resend } from "resend";
 dotenv.config();
 
 const app = express();
+
 const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
 
+
+console.log(
+    "RESEND KEY LOADED:",
+    process.env.RESEND_API_KEY ? "YES" : "NO"
+);
+
+
 const resend = new Resend(process.env.RESEND_API_KEY);
+
 
 // Test route
 app.get("/", (req, res) => {
+
     res.json({
-        message: "Portfolio server is running!",
+        message: "Portfolio server is running!"
     });
+
 });
 
-// Contact form route
+
+// Contact API
 app.post("/api/contact", async(req, res) => {
+
+    console.log("CONTACT REQUEST RECEIVED");
+
     try {
-        const { name, email, subject, message } = req.body;
 
-        // Check required fields
-        if (!name || !email || !subject || !message) {
-            return res.status(400).json({
-                success: false,
-                message: "Please fill in all fields.",
-            });
-        }
+        const {
+            name,
+            email,
+            subject,
+            message
+        } = req.body;
 
-        console.log("New contact form submission:");
+
         console.log({
             name,
             email,
             subject,
-            message,
+            message
         });
 
-        const { data, error } = await resend.emails.send({
+
+        if (!name || !email || !subject || !message) {
+
+            return res.status(400).json({
+                success: false,
+                message: "All fields are required."
+            });
+
+        }
+
+
+        const result = await resend.emails.send({
+
             from: "onboarding@resend.dev",
-            to: ["tasmiyaansari2002@gmail.com"],
+
+            to: [
+                "tasmiyaansari2002@gmail.com"
+            ],
+
+            replyTo: email,
+
             subject: `Portfolio Contact: ${subject}`,
 
             html: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <h2>New Portfolio Message</h2>
 
-          <p><strong>Name:</strong> ${name}</p>
+      <h2>New Portfolio Message</h2>
 
-          <p><strong>Email:</strong> ${email}</p>
+      <p><b>Name:</b> ${name}</p>
 
-          <p><strong>Subject:</strong> ${subject}</p>
+      <p><b>Email:</b> ${email}</p>
 
-          <hr />
+      <p><b>Subject:</b> ${subject}</p>
 
-          <h3>Message</h3>
+      <p><b>Message:</b></p>
 
-          <p>${message}</p>
+      <p>${message}</p>
 
-          <hr />
+      `
 
-          <p>
-            You can reply directly to:
-            <strong>${email}</strong>
-          </p>
-        </div>
-      `,
         });
 
-        if (error) {
-            console.error("Resend error:", error);
 
-            return res.status(500).json({
-                success: false,
-                message: "Unable to send your message.",
-            });
-        }
+        console.log("RESEND RESULT:", result);
 
-        console.log("Email sent successfully!");
-        console.log("Resend ID:", data && data.id);
 
-        return res.status(200).json({
+        return res.json({
+
             success: true,
-            message: "Message sent successfully! I'll get back to you within 24 hours.",
+
+            message: "Message sent successfully"
+
         });
+
+
+
     } catch (error) {
-        console.error("Server error:", error);
+
+
+        console.error(
+            "BACKEND ERROR:",
+            error
+        );
+
 
         return res.status(500).json({
+
             success: false,
-            message: "Something went wrong. Please try again.",
+
+            message: error.message
+
         });
+
+
     }
+
+
 });
 
+
 app.listen(PORT, () => {
-    console.log(`Portfolio server running on http://localhost:${PORT}`);
+
+    console.log(
+        `Portfolio server running on http://localhost:${PORT}`
+    );
+
 });
