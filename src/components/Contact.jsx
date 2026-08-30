@@ -1,6 +1,8 @@
 import "./Contact.css";
 import { useState } from "react";
+
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [copied, setCopied] = useState(false);
@@ -31,76 +33,39 @@ function Contact() {
 
   const form = event.currentTarget;
 
-  const formData = new FormData(form);
-
-  const name = formData.get("name");
-  const senderEmail = formData.get("email");
-  const subject = formData.get("subject");
-  const message = formData.get("message");
-
-
   try {
-
-    const response = await fetch("/api/contact", {
-      method: "POST",
-
-      headers: {
-        "Content-Type": "application/json",
+    await emailjs.send(
+      "service_21bxs0i",
+      "template_wcr4saj",
+      {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value,
       },
-
-      body: JSON.stringify({
-  name,
-  email: senderEmail,
-  subject: subject,
-  message: message,
-}),
-
-    });
-
-const text = await response.text();
-
-let data;
-
-try {
-  data = JSON.parse(text);
-} catch {
-  throw new Error(
-    "Server returned invalid response: " + text
-  );
-}
-
-console.log("SERVER RESPONSE:", data);
-
-
-    if (!response.ok) {
-
-      throw new Error(
-        data.message || "Unable to send message."
-      );
-
-    }
+      "Abmcs7uNBfIt5iOFp"
+    );
 
 
     setStatus(
       "Message sent successfully! I'll get back to you within 24 hours."
     );
 
-
     form.reset();
-
 
   } catch (error) {
 
-console.error("Contact form error:", error);
+    console.error("EmailJS Error:", error);
 
-setStatus(error.message);
+    setStatus(
+      "Failed to send message. Please try again."
+    );
 
-}finally {
+  } finally {
 
     setSending(false);
 
   }
-
 };
 
   return (
