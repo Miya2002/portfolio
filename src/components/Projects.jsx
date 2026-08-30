@@ -1,5 +1,6 @@
 import "./Projects.css";
 import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const projects = [
    {
@@ -212,12 +213,12 @@ function Projects() {
       </div>
       <div className="view-more-wrapper">
 
-<a 
-href="/projects"
-className="view-more-button"
+<Link
+  to="/projects"
+  className="view-more-button"
 >
-View More Projects ↗
-</a>
+  View More Projects ↗
+</Link>
 
 </div>
     </section>
