@@ -1,7 +1,6 @@
 import "./Projects.css";
 import { motion } from "framer-motion";
-import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 const projects = [
    {
     number: "01",
