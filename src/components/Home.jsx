@@ -52,7 +52,7 @@ function Home() {
           <div className="portrait-backdrop" aria-hidden="true" />
 
           <img
-            src="/profile4.png"
+            src="/pp.png"
             alt="Tasmiya Ansari"
             className="profile-image"
           />

@@ -37,6 +37,25 @@ const projects = [
 
     {
         number: "03",
+        title: "Sourcelens",
+        category: "Web Applications",
+        type: "Notes Summarizer",
+        description: "An AI-powered document analysis platform that allows users to upload PDF files, automatically generate concise summaries, and ask questions directly from uploaded documents.",
+        technologies: [
+            "React.js",
+            "FastAPI",
+            "NestJS",
+            "JavaScript",
+            "PDF Processing",
+            "AI/NLP"
+        ],
+        image: "/projects/sourcelens.png",
+        liveLink: "https://github.com/Miya2002/sourcelens-ai.git",
+        accent: "#9b3452",
+    },
+
+    {
+        number: "04",
         title: "MediGlide Transport",
         category: "Web Applications",
         type: "Healthcare Transportation Website",
@@ -55,24 +74,7 @@ const projects = [
         accent: "#1b8ca8",
     },
 
-    {
-        number: "04",
-        title: "Sourcelens",
-        category: "Web Applications",
-        type: "Notes Summarizer",
-        description: "An AI-powered document analysis platform that allows users to upload PDF files, automatically generate concise summaries, and ask questions directly from uploaded documents.",
-        technologies: [
-            "React.js",
-            "FastAPI",
-            "NestJS",
-            "JavaScript",
-            "PDF Processing",
-            "AI/NLP"
-        ],
-        image: "/projects/sourcelens.png",
-        liveLink: "https://github.com/Miya2002/sourcelens-ai.git",
-        accent: "#9b3452",
-    },
+
 
 
     {
