@@ -30,17 +30,24 @@ const projects = [
     accent: "#bd6288",
   },
    {
-    number: "03",
-    title: "Sourcelens",
-    category: "Web Applications",
-    type: "Notes Summarizer",
-    description:
-      "An AI-powered document analysis platform that allows users to upload PDF files, automatically generate concise summaries, and ask questions directly from the uploaded document.",
-    technologies: ["React.js", "FastAPI", "NestJS","JavaScript","PDF Processing,","AI/NLP"],
-    image: "/projects/sourcelens.png",
-    liveLink: "https://github.com/Miya2002/sourcelens-ai.git",
-    accent: "#9b3452",
-  },
+        number: "03",
+        title: "MediGlide Transport",
+        category: "Web Applications",
+        type: "Healthcare Transportation Website",
+        description: "A modern medical transportation platform designed to provide safe, reliable, and professional non-emergency medical transportation services. The website focuses on user-friendly booking, service information, responsive design, and a professional healthcare-focused digital experience.",
+        technologies: [
+            "React",
+            "Vite",
+            "JavaScript",
+            "CSS",
+            "Node.js",
+            "Express",
+            "Resend API"
+        ],
+        image: "/projects/mediglide.png",
+        liveLink: "https://mediglidetransport.com",
+        accent: "#1b8ca8",
+    },
 
   {
     number: "04",

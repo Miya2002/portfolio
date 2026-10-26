@@ -1,3 +1,4 @@
+
 import "./Home.css";
 
 function Home() {
@@ -12,9 +13,9 @@ function Home() {
 
       <h1
         className="home-name home-reveal home-reveal--2"
-        aria-label="Tasmiya Ansari"
+        aria-label="Engr, Tasmiya Ansari"
       >
-        <span>TASMIYA</span> ANSARI
+        <span>Engr. </span> Tasmiya Ansari
       </h1>
 
       <div
@@ -26,10 +27,13 @@ function Home() {
 
       <div className="home-content">
         <div className="home-introduction home-reveal home-reveal--4">
-          <p className="home-kicker">Designing logic into experiences</p>
-           <br></br>
+          <p className="home-kicker">
+            Designing logic into experiences
+          </p>
+
+          <br></br>
+
           <h2>Software Engineer</h2>
-         
 
           <p className="home-summary">
             I build practical digital solutions that transform real-world
@@ -49,11 +53,14 @@ function Home() {
         </div>
 
         <div className="portrait-container home-reveal home-reveal--3">
-          <div className="portrait-backdrop" aria-hidden="true" />
+          <div
+            className="portrait-backdrop"
+            aria-hidden="true"
+          />
 
           <img
             src="/pp.png"
-            alt="Tasmiya Ansari"
+            alt="Engr, Tasmiya Ansari"
             className="profile-image"
           />
         </div>
@@ -72,8 +79,8 @@ function Home() {
           </a>
 
           <a href="#contact" className="secondary-button">
-              Contact Me
-            </a>
+            Contact Me
+          </a>
 
           <a href="#projects">
             Selected Work

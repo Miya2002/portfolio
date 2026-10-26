@@ -4,7 +4,30 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const experiences = [
   {
-    number: "01",
+  number: "05",
+  organization: "Moonrank.co",
+  role: "Full Stack Developer (Remote Job)",
+  date: "Present",
+  category: "Professional Experience",
+  description:
+    "Developed and deployed full-stack business websites using modern technologies, managing everything from development to deployment and ongoing client-driven updates.",
+  details: [
+    "Built responsive business websites using React.js, Next.js, and Vue.js.",
+    "Integrated APIs and Resend for dynamic functionality and email communication.",
+    "Managed domain configuration, hosting, and complete website deployment.",
+    "Handled post-deployment maintenance and modifications based on client requirements.",
+  ],
+  technologies: [
+    "React.js",
+    "Next.js",
+    "Vue.js",
+    "REST APIs",
+    "Resend API",
+    "Deployment & Domain Management",
+  ],
+},
+  {
+    number: "04",
     organization: "Jai Prime Global",
     role: "Backend Developer Intern",
     date: "2 Months",
@@ -20,7 +43,7 @@ const experiences = [
     technologies: ["Backend Development", "Database", "Admin Panel"],
   },
   {
-    number: "02",
+    number: "03",
     organization: "GrowIntern",
     role: "Remote Intern",
     date: "1 Month",
@@ -36,7 +59,7 @@ const experiences = [
     technologies: ["Remote Work", "Development", "Collaboration"],
   },
   {
-    number: "03",
+    number: "02",
     organization: "TEDxClifton",
     role: "Hospitality Team Lead",
     date: "2025",
@@ -52,7 +75,7 @@ const experiences = [
     technologies: ["Leadership", "Teamwork", "Communication"],
   },
   {
-    number: "04",
+    number: "01",
     organization: "GDG Kolachi",
     role: "DevFest Event Coordinator",
     date: "2024",
