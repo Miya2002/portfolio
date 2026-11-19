@@ -78,28 +78,11 @@ const projects = [
         accent: "#c46a32",
     },
 
+
+
+
     {
         number: "06",
-        title: "XTACH",
-        category: "Business Websites",
-        type: "Frontend Development",
-        description: "A modern and responsive business website frontend designed and developed to establish a professional online presence. Focused on clean UI design, intuitive navigation, smooth user experience, and seamless responsiveness across desktop, tablet, and mobile devices.",
-        technologies: [
-            "React.js",
-            "JavaScript",
-            "HTML5",
-            "CSS3",
-            "Responsive Design",
-            "UI/UX"
-        ],
-        image: "/projects/xtach.jpeg",
-        liveLink: "https://xtach-website.vercel.app/",
-        accent: "#2563eb",
-    },
-
-
-    {
-        number: "07",
         title: "Whimsy Wear",
         category: "Web Applications",
         type: "E-commerce Website",
